@@ -7,6 +7,7 @@ const rootDir = require('./utils/pathUtils')
 
 const app = express();
 
+app.use(express.static(path.join(rootDir, "public")))
 // bodyparser not needed
 app.use(express.urlencoded());
 
