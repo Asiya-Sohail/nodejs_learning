@@ -7,8 +7,8 @@ const rootDir = require('../utils/pathUtils')
 // const RegisteredHomes = []
 
 module.exports = class Home {
-  constructor(housName, price, location, rating, photoUrl) {
-    this.housName = housName
+  constructor(houseName, price, location, rating, photoUrl) {
+    this.houseName = houseName
     this.price = price
     this.location = location
     this.rating = rating
@@ -32,7 +32,7 @@ module.exports = class Home {
 
   static fetchAll(callback) {
     const HomeDataPath = path.join(rootDir, 'data', 'homes.json');
-    const FilePath = fs.readFile(HomeDataPath, (err, data)=> {
+    fs.readFile(HomeDataPath, (err, data)=> {
       // console.log("File read : ", err, data);
       // USing Smart way
       callback(!err ? JSON.parse(data) : [])
