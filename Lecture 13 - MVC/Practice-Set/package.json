@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tailwind": "npx @tailwindcss/cli -c tailwind.config.js -i ./views/input.css -o ./public/output.css --watch",
-    "start": "nodemon app.js & npm run tailwind"
+    "start": "node init && nodemon app.js & npm run tailwind"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.12",
